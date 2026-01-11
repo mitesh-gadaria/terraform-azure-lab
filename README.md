@@ -1,7 +1,7 @@
 # Terraform Azure Learning Project
 
 ## Overview
-This is a beginner-friendly personal project created to support my transition from a Quality Assurance role into a Junior DevOps position.  
+This is a beginner-friendly personal project created to support my transition from a Quality Assurance role into a DevOps position.  
 The goal of this repository is to demonstrate hands-on learning with Infrastructure as Code (IaC), cloud resources, and version control using Git.
 
 ## Skills Demonstrated

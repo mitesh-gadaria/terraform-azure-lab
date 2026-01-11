@@ -11,6 +11,15 @@ The goal of this repository is to demonstrate hands-on learning with Infrastruct
 - CI/CD and automation concepts
 - DevOps and infrastructure learning mindset
 
+## Tools & Technologies
+- Version Control: Git, GitHub
+- Infrastructure as Code: Terraform (learning project)
+- Cloud Platform: Microsoft Azure
+- CI/CD: Azure DevOps (concepts and pipeline integration exposure)
+- Containers & Platforms: Kubernetes (non-production environments), VMware
+- Automation & Testing: Python, Playwright, Postman
+- Operating Systems: Windows Server
+
 ## Project Roadmap
 This project will gradually include:
 - Terraform configuration files to provision Azure resources

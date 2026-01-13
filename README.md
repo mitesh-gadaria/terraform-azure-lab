@@ -1,31 +1,67 @@
-# Terraform Azure Learning Project
+# Terraform Azure Static Website Project
 
 ## Overview
-This is a beginner-friendly personal project created to support my transition from a Quality Assurance role into a DevOps position.  
-The goal of this repository is to demonstrate hands-on learning with Infrastructure as Code (IaC), cloud resources, and version control using Git.
+This project demonstrates the use of **Terraform** to provision and manage cloud infrastructure on **Microsoft Azure** using **Infrastructure as Code (IaC)** principles.
 
-## Skills Demonstrated
-- Git & GitHub (version control, commits, remote repositories)
-- Terraform (Infrastructure as Code fundamentals)
-- Microsoft Azure (cloud resource provisioning)
-- CI/CD and automation concepts
-- DevOps and infrastructure learning mindset
+The infrastructure includes an Azure Resource Group, a Storage Account, and Static Website Hosting, with content deployed using the Azure CLI.
 
-## Tools & Technologies
-- Version Control: Git, GitHub
-- Infrastructure as Code: Terraform (learning project)
-- Cloud Platform: Microsoft Azure
-- CI/CD: Azure DevOps (concepts and pipeline integration exposure)
-- Containers & Platforms: Kubernetes (non-production environments), VMware
-- Automation & Testing: Python, Playwright, Postman
-- Operating Systems: Windows Server
+The project focuses on foundational DevOps practices such as declarative infrastructure, version control, safe change management, and cloud authentication.
 
-## Project Roadmap
-This project will gradually include:
-- Terraform configuration files to provision Azure resources
-- Use of variables and outputs
-- Infrastructure changes tracked through Git commits
-- Documentation explaining design decisions and learning outcomes
+---
 
-## About Me
-I am a Quality Assurance Engineer transitioning into DevOps, with hands-on experience in automation, CI/CD pipelines, and cloud-based environment# Terraform Azure Learning Project
+## Technologies Used
+- Terraform
+- Microsoft Azure
+- Azure CLI
+- Git & GitHub
+- HTML
+
+---
+
+## Infrastructure Components
+- Azure Resource Group
+- Azure Storage Account (StorageV2)
+- Static Website Hosting enabled on the storage account
+- HTTPS-only traffic enforced
+- Role-Based Access Control (RBAC) for secure blob uploads
+
+---
+
+## What This Project Demonstrates
+- Writing declarative Terraform configurations to define cloud infrastructure
+- Using `terraform init`, `terraform plan`, and `terraform apply` to manage infrastructure safely
+- Managing Terraform providers and outputs
+- Authenticating Terraform and Azure CLI using Azure Active Directory
+- Understanding Azure control plane vs data plane permissions
+- Deploying static website content to Azure Storage
+- Verifying deployed infrastructure using Azure CLI and browser access
+
+---
+
+## How to Use This Project
+
+### Prerequisites
+- Azure subscription
+- Terraform installed
+- Azure CLI installed and authenticated
+- Git
+
+### Deployment Steps
+`bash
+terraform init
+terraform plan
+terraform apply
+
+## Upload Website Content
+az storage blob upload \
+  --account-name <storage_account_name> \
+  --container-name '$web' \
+  --name index.html \
+  --file index.html \
+  --auth-mode login
+
+## Result
+The deployed website is publicly accessible via the Azure Storage static website endpoint and serves a simple HTML page hosted entirely on Azure infrastructure provisioned with Terraform
+
+## Notes
+This project was created as a personal learning project to build hands-on experience with Terraform and Azure, focusing on clarity, correctness, and best practices rather than complex architectures.

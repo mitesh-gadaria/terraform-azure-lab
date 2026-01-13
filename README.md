@@ -52,7 +52,7 @@ terraform init
 terraform plan
 terraform apply
 
-## Upload Website Content
+### Upload Website Content
 az storage blob upload \
   --account-name <storage_account_name> \
   --container-name '$web' \

@@ -65,3 +65,4 @@ The deployed website is publicly accessible via the Azure Storage static website
 
 ## Notes
 This project was created as a personal learning project to build hands-on experience with Terraform and Azure, focusing on clarity, correctness, and best practices rather than complex architectures.
+

@@ -19,8 +19,8 @@ terraform {
 provider "azurerm" {
   features {}
 
-  # Force Service Principal auth (ARM_* env vars) and avoid Azure CLI auth
-  use_cli = false
+  subscription_id = var.subscription_id
+  tenant_id       = var.tenant_id
 }
 
 resource "azurerm_resource_group" "rg" {

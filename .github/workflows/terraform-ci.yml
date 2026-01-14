@@ -33,12 +33,4 @@ jobs:
           ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
           ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
           ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
-        run: |
-          set +e
-          terraform plan -no-color
-          rc=$?
-          if [ $rc -ne 0 ]; then
-            echo "::warning::terraform plan failed (likely missing Azure credentials). This is expected until ARM_* secrets are added."
-          fi
-          exit 0
-
+        run: terraform plan -no-color

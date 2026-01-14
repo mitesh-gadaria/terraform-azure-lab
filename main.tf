@@ -18,6 +18,9 @@ terraform {
 
 provider "azurerm" {
   features {}
+
+  # Force Service Principal auth (ARM_* env vars) and avoid Azure CLI auth
+  use_cli = false
 }
 
 resource "azurerm_resource_group" "rg" {
@@ -42,5 +45,8 @@ resource "azurerm_storage_account" "sa" {
 
   https_traffic_only_enabled = true
 
+  static_website {
+    index_document     = "index.html"
+    error_404_document = "404.html"
+  }
 }
-
